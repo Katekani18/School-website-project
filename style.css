@@ -5,23 +5,47 @@
     --friends-primary-font: 'Tw Cen MT Regular';
     font-family: var(--friends-primary-font);
 }
+.btn-primary{
+    background-color: var(--friends-tertiary-color);
+}
+.welcome-image-section{
+    display: flex;
+    justify-content: center;
+}
+.temp-empty-item {
+    background-image: url('./empty.png');
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
 .nav-bar{
     display: flex;
     flex-direction: column;
     border: 1px solid black;
+    border-radius: 5px;
 }
 .centered{
     text-align: center;
+    padding: .5em;
 }
 .form-group{
     margin: 10px;
+}
+header{
+    background-color:var(--friends-secondary-color);
+}
+.right-justified{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
 }
 .tab-item{
     text-decoration: none;
     color: black;
     margin: 1em;
     padding: .25em;
-    border-radius: 2px;
+    border-radius: 3px;
+    transition: 500ms;
 }
 .tab-item:hover{
     background-color: silver;
@@ -32,12 +56,13 @@
 .content-box{
     margin: 1em;
     min-height: 75vh;
+    border-radius: 5px;
     border: 1px solid black;
     padding: 1em;
 }
 .brand-title{
     margin: .5em;
-    padding: .25em;
+    padding: 1.5em;
 }
 .brand-title .tab-item:hover{
     background-color: unset;
@@ -47,6 +72,59 @@
     flex-direction: row;
 }
 .tab-section{
+    display: flex;
     padding: 2em;
     justify-content: end;
+    width: 100%;
+}
+.content-heading{
+    text-align: center;
+    padding: 1em;
+    margin: .5em;
+}
+.content-events{
+    margin: 1em;
+    display: flex;
+    flex-direction: row;
+}
+.event-item{
+    border: 1px solid black;
+    padding: .5em;
+    margin: 1em;
+    width: 200px;
+    height: 500px;
+}
+footer{
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color:var(--friends-secondary-color);
+    padding: 1em;
+}
+.donation-section{
+    display: flex;
+    flex-grow: 1;
+    
+}
+.about-footer-section{
+    flex-grow: 3;
+    border: 1px solid black;
+    margin: .5em;
+    padding: 1em;
+}
+.footer-end-section{
+    display: flex;
+    flex-direction: row;
+    margin: .5em;
+}
+.donation-section fieldset{
+    background: white;
+    margin: .5em;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.google-map-section{
+    padding: 1em;
+    border: 1px solid black;
+    margin: .5em;
+    flex-grow: 3
 }
