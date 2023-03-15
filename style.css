@@ -1,0 +1,52 @@
+*{
+    --friends-primary-color: rgba(0, 92, 179, 0.692);
+    --friends-secondary-color: rgba(140, 251, 255, 0.651);
+    --friends-tertiary-color: rgb(15, 130, 224);
+    --friends-primary-font: 'Tw Cen MT Regular';
+    font-family: var(--friends-primary-font);
+}
+.nav-bar{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+.centered{
+    text-align: center;
+}
+.form-group{
+    margin: 10px;
+}
+.tab-item{
+    text-decoration: none;
+    color: black;
+    margin: 1em;
+    padding: .25em;
+    border-radius: 2px;
+}
+.tab-item:hover{
+    background-color: silver;
+}
+.tab-item:visited{
+    color: black;
+}
+.content-box{
+    margin: 1em;
+    min-height: 75vh;
+    border: 1px solid black;
+    padding: 1em;
+}
+.brand-title{
+    margin: .5em;
+    padding: .25em;
+}
+.brand-title .tab-item:hover{
+    background-color: unset;
+}
+.nav-section{
+    display: flex;
+    flex-direction: row;
+}
+.tab-section{
+    padding: 2em;
+    justify-content: end;
+}
