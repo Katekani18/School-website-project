@@ -3,14 +3,30 @@
     --friends-secondary-color: rgba(140, 251, 255, 0.651);
     --friends-tertiary-color: rgb(15, 130, 224);
     --friends-primary-font: 'Tw Cen MT Regular';
+    --friends-primary-gradient: linear-gradient(right, var(--friends-primary-color), var(--friends-secondary-color));
     font-family: var(--friends-primary-font);
 }
+/* body{
+    background-color: var(--friends-tertiary-color);
+} */
 .btn-primary{
     background-color: var(--friends-tertiary-color);
 }
 .welcome-image-section{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+.social {
+    margin: 10px 10px;
+}
+.social i{
+    color: white;
+    font-size: 30px;
+    padding:0px 10px;
+
+}
+.welcome-image-section img{
+    border-radius: 6px;
 }
 .temp-empty-item {
     background-image: url('./empty.png');
@@ -18,11 +34,23 @@
     width: 200px;
     height: 200px;
 }
+main{
+    /* background-color: var(--friends-primary-color); */
+    color: white;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+main .content-event {
+    color: black;
+}
+.content-image-box{
+
+}
 .nav-bar{
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
-    border-radius: 5px;
+    /* border: 1px solid silver; */
+    border-radius: 6px;
 }
 .centered{
     text-align: center;
@@ -32,7 +60,7 @@
     margin: 10px;
 }
 header{
-    background-color:var(--friends-secondary-color);
+    background-color:var(--friends-primary-color);
 }
 .right-justified{
     display: flex;
@@ -41,7 +69,7 @@ header{
 }
 .tab-item{
     text-decoration: none;
-    color: black;
+    color: white;
     margin: 1em;
     padding: .25em;
     border-radius: 3px;
@@ -51,18 +79,20 @@ header{
     background-color: silver;
 }
 .tab-item:visited{
-    color: black;
+    color: white;
 }
 .content-box{
     margin: 1em;
     min-height: 75vh;
     border-radius: 5px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 1em;
+    
 }
 .brand-title{
     margin: .5em;
     padding: 1.5em;
+    font-size: 24px;
 }
 .brand-title .tab-item:hover{
     background-color: unset;
@@ -86,45 +116,210 @@ header{
     margin: 1em;
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 .event-item{
-    border: 1px solid black;
     padding: .5em;
     margin: 1em;
     width: 200px;
-    height: 500px;
+    height: 250px;
+    color: black;
+}
+.event-header{
+    text-align: center;
+    padding: .2em;
+    margin: .1em;
+}
+.event-content p{
+    color: white;
+    margin: .5em;
 }
 footer{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 5px;
-    background-color:var(--friends-secondary-color);
+    background-color:var(--friends-primary-color);
     padding: 1em;
+}
+footer .centered{
+    color: white;
+}
+.news-section{
+    border: 1px silver solid;
+    height: 20em;
 }
 .donation-section{
     display: flex;
-    flex-grow: 1;
-    
+    justify-content: center;
+    height: 280px;
+}
+.content-desc-box{
+    margin: 1em;
+    padding: .5em;
+}
+.content-desc-box p{
+    font-size: 20px;
 }
 .about-footer-section{
-    flex-grow: 3;
-    border: 1px solid black;
+    /* flex-grow: 3; */
     margin: .5em;
     padding: 1em;
+    color: white;
 }
 .footer-end-section{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     margin: .5em;
+}
+/* .footer-end-section .about-footer-section{
+    border-right: 1px solid silver;
+}
+.footer-end-section .google-map-section{
+    border-left: 1px solid silver;
+} */
+.columned{
+    display: flex !important;
+    flex-direction: row;
 }
 .donation-section fieldset{
     background: white;
     margin: .5em;
-    border: 1px solid black;
+    border: none;
     border-radius: 5px;
+    width: 180px;
+    height: 180;
+}
+.news-list{
+    margin: .5em;
+    padding: .2em;
+}
+.news-item{
+    font-weight: 100;
+}
+.short-desc{
+    padding: 1em;
+    margin: 1em;
 }
 .google-map-section{
     padding: 1em;
-    border: 1px solid black;
     margin: .5em;
-    flex-grow: 3
+    width: 300px;
+    justify-content: end;
+}
+#googleMap {
+    width: 250px;
+    height: 250px;
+}
+.accordian{
+    margin: 100px auto;
+    width: 600px;
+}
+.accordian li{
+    list-style: none;
+    width: 100px;
+    margin-bottom: 10px;
+    background-color: darkgray;
+    padding: 10px;
+    border-radius: 4px;
+}
+.accordian li label{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-size: 400;
+    cursor:pointer;
+    color: rgb(17, 144, 218);
+
+}
+.accordian li label span{
+    transform: rotate(180deg);
+    font-size: 22px;
+    color:azure;
+}
+.accordian label + input[type="radio"]{
+    display:none;
+}
+.accordian .content{
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition:max-height 0.5s;
+}
+.accordian label + input[type="radio"]:checked + .content{
+    max-height: 400px;
+}
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    margin: .2em;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  #accordian li .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+  }
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (max-width: 768px) {
+    main{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .content-events{
+        margin: 1em;
+        display: flex;
+        flex-direction: column;
+    }
+    .apply_box{
+        margin: 10px !important;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (max-width: 992px) {
+    main{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .content-events{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    .apply_box{
+        margin: 10px !important;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
 }
